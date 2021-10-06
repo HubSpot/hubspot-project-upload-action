@@ -6,8 +6,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Access resources directory
+        run: cd resources
       - name: HubSpot Project Upload Action
-        working-directory: ./resources
+        uses: ./
         with:
           account_id: ${{ secrets.hubspot_account_id }}
           personal_access_key: ${{ secrets.hubspot_personal_access_key }}
