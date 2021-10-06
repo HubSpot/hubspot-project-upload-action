@@ -7,7 +7,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: HubSpot Project Upload Action
-        uses: ./resources
+        uses: ./
+        working-directory: ./resources
         with:
           account_id: ${{ secrets.hubspot_account_id }}
           personal_access_key: ${{ secrets.hubspot_personal_access_key }}
