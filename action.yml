@@ -6,12 +6,6 @@ branding:
   icon: 'upload-cloud'
   color: 'orange'
 inputs:
-  src_dir:
-    description: Directory in project to be published
-    required: true
-  dest_dir:
-    description: Directory in account which project will be published to
-    require: true
   portal_id:
     description: Target HubSpot account (Should be stored in secrets)
     required: true
@@ -24,23 +18,10 @@ runs:
     - name: Install NPM deps
       run: npm install
       shell: bash
-    - name: Check hsproject.json existence
-      id: check_files
-      uses: andstor/file-existence-action@v1
-      with:
-        files: "hsproject.json"
-        allow_failure: "true"
-    - name: Missing hsproject.json
-      if: steps.check_files.outputs.files_exists == 'false'
-      run: |
-        echo "No hsproject.json file found"
     - name: Upload Project
-      if: steps.check_files.outputs.files_exists == 'true'
       env:
         HUBSPOT_PORTAL_ID: ${{ inputs.portal_id }}
         HUBSPOT_PERSONAL_ACCESS_KEY: ${{ inputs.personal_access_key }}
       run: |
         npx @hubspot/cli@3.0.9 project upload --use-env
       shell: bash
-
-
