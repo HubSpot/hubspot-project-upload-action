@@ -1,2 +1,2 @@
-# hubspot-project-deploy-action
-GitHub Action to deploy HubSpot Projects
+# hubspot-project-upload-action
+GitHub Action to upload HubSpot Projects
