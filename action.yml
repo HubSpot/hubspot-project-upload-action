@@ -18,6 +18,12 @@ runs:
     - name: Install NPM deps
       run: npm install
       shell: bash
+    - name: Where are Me
+      run: echo $(ls)
+      shell: bash
+    - name: Where Am I
+      run: ls
+      shell: bash
     - name: Upload Project
       env:
         HUBSPOT_PORTAL_ID: ${{ inputs.account_id}}
