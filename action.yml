@@ -1,10 +1,9 @@
-
 name: HubSpot Project Upload
 author: HubSpot
 description: Upload files to your HubSpot Project
 branding:
-  icon: 'upload-cloud'
-  color: 'orange'
+  icon: "upload-cloud"
+  color: "orange"
 inputs:
   account_id:
     description: Target HubSpot account (Should be stored in secrets)
@@ -20,9 +19,8 @@ runs:
       shell: bash
     - name: Upload Project
       env:
-        HUBSPOT_PORTAL_ID: ${{ inputs.account_id}}
+        HUBSPOT_PORTAL_ID: ${{ inputs.account_id }}
         HUBSPOT_PERSONAL_ACCESS_KEY: ${{ inputs.personal_access_key }}
-        ENV: qa
       run: |
         npx @hubspot/cli@3.0.9-beta.2 project upload --use-env
       shell: bash
