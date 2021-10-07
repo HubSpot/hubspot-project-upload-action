@@ -9,5 +9,5 @@ jobs:
       - name: HubSpot Project Upload Action
         uses: ./
         with:
-          account_id: ${{ secrets.hubspot.account_id }}
+          account_id: ${{ secrets.hubspot_account_id }}
           personal_access_key: ${{ secrets.hubspot_personal_access_key }}
