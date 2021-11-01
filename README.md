@@ -33,5 +33,5 @@ jobs:
 *Note:* Do not change the `account_id` or `personal_access_key` values in your workflow. Auth related values should only be stored as GitHub secrets.
 
 ### Secrets
-- `HUBSPOT_PORTAL_ID` - Target account id
+- `HUBSPOT_ACCOUNT_ID` - Target account id
 - `HUBSPOT_PERSONAL_ACCESS_KEY` - Authentication key
