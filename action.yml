@@ -14,9 +14,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Install NPM deps
-      run: npm install
-      shell: bash
     - name: Upload Project
       env:
         HUBSPOT_PORTAL_ID: ${{ inputs.account_id }}
