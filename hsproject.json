@@ -1,4 +1,5 @@
 {
   "name": "HS_UPLOAD_ACTION_PROJECT",
-  "srcDir": "./src"
+  "srcDir": "./src",
+  "platformVersion": "2025.1"
 }

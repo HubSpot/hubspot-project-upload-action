@@ -1,0 +1,7 @@
+{
+  "name": "HS_UPLOAD_ACTION_PROJECT_APP",
+  "description": "A simple private app to validate the project upload action",
+  "uid": "hs_upload_action_project_app",
+  "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write"],
+  "public": false
+}
