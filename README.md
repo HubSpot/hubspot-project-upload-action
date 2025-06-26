@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.3
       - name: HubSpot Project Upload Action
-        uses: HubSpot/hubspot-project-upload-action@v1.0
+        uses: HubSpot/hubspot-project-upload-action@v1.3
         with:
           account_id: ${{ secrets.hubspot_account_id }}
           personal_access_key: ${{ secrets.hubspot_personal_access_key }}
