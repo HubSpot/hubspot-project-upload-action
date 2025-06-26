@@ -23,5 +23,5 @@ runs:
         HUBSPOT_ACCOUNT_ID: ${{ inputs.account_id }}
         HUBSPOT_PERSONAL_ACCESS_KEY: ${{ inputs.personal_access_key }}
       run: |
-        npx --yes --package=@hubspot/cli@7.5.1-beta.0 --call='hs project upload --force-create --use-env'
+        npx --yes --package=@hubspot/cli@7.5.1-beta.0 --call='hs project upload --force-create --use-env --message "${{ github.event.head_commit.message || 'Uploaded via HubSpot GitHub Action' }}"'
       shell: bash
