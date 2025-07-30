@@ -1,5 +1,9 @@
 # HubSpot Project Upload Action
 
+:warning: This actions repo is deprecated. We recommend using the newer [hubspot-project-actions](https://github.com/HubSpot/hubspot-project-actions) repo instead!
+
+---
+
 Automatically upload a HubSpot Project to your account 🚀
 
 ## Usage
